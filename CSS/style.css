@@ -26,7 +26,10 @@ header nav{
     background-image: url(../img/sidebar-bg.png);
     background-size: cover;
     background-color: #051d33;
+    width: 50px;
 }
+
+
 
 main{
     width: calc(100vw - 50px);
@@ -43,6 +46,25 @@ main{
     color: white;
 }
 
+
+
+
+.ms_logo_class{
+    width: 30px;
+    border-radius: 50%;
+}
+
+.ms_table_text tr th:first-child, .ms_table_text tr td:first-child{
+    text-align: left;
+}
+
+.ms_table_text tr th:nth-child(2),.ms_table_text tr td:nth-child(2){
+    display: none;
+}
+
+.ms_table_text tr th:nth-child(3),.ms_table_text tr td:nth-child(3){
+    display: none;
+}
 
 
 /* debug */
@@ -81,7 +103,15 @@ main{
 
 
 
-
+@media screen and (min-width: 768px) {
+    .ms_table_text tr th:nth-child(2),.ms_table_text tr td:nth-child(2){
+        display: table-cell;
+    }
+    
+    .ms_table_text tr th:nth-child(3),.ms_table_text tr td:nth-child(3){
+        display: table-cell;
+    }
+}
 
 
 
@@ -91,4 +121,7 @@ main{
     #sidebar{
         width: 150px;
     }    
+    main{
+        width: calc(100vw - 150px);
+    }
 }

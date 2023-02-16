@@ -16,6 +16,13 @@ header nav{
     height: 55px;
 }
 
+.sidebar-top{
+    height: calc(100% - 50px);
+}
+
+.sidebar-bottom{
+    height: 50px;
+}
 
 #ms_big_container{
     margin-top: 56px;
@@ -27,9 +34,13 @@ header nav{
     background-size: cover;
     background-color: #051d33;
     width: 50px;
+    min-height: 500px;
 }
 
-
+.ms_hover_li:hover{
+    background-color: white;
+    color: black;
+}
 
 main{
     width: calc(100vw - 50px);
@@ -47,7 +58,13 @@ main{
 }
 
 
+.ms_table_col_big{
+    width: auto;
+}
 
+.ms_table_col_small{
+    width: 10%;
+}
 
 .ms_logo_class{
     width: 30px;
@@ -67,40 +84,16 @@ main{
 }
 
 
-/* debug */
-
-.debug .sidebar-top{
-    height: calc(100% - 50px);
-}
-
-.debug .sidebar-bottom{
-    height: 50px;
-}
-.blu{
-    background-color: blue;
-}
-
-.yellow{
-    background-color: yellow;
-}
-
-.box{
-    height: 50px;
-    background-color: red;
-    width: 100%;
-}
-
-/* fine debug  */
-
 .ms_pill_blue{
     background-color: var(--pill-blue);
 }
 
+.offcanvas.offcanvas-end{
+    width: 100%;
+}
 
 
-
-
-
+                /* media queri */
 
 
 @media screen and (min-width: 768px) {
@@ -123,5 +116,8 @@ main{
     }    
     main{
         width: calc(100vw - 150px);
+    }
+    .offcanvas.offcanvas-end{
+        width: 35%;
     }
 }

@@ -60,15 +60,15 @@
         <aside id="sidebar">
             <div class="sidebar-top text-white ps-3 pt-3">
                 <ul class="navbar-nav">
-                    <li>
+                    <li class="mb-3 ms_hover_li">
                         <i class="bi bi-house-fill"></i>
                         <span class="d-none d-lg-inline ps-2">Home</span>
                     </li>
-                    <li>
+                    <li class="mb-3 ms_hover_li">
                         <i class="bi bi-bar-chart"></i>
                         <span class="d-none d-lg-inline ps-2">Stats</span>
                     </li>
-                    <li>
+                    <li class="mb-3 ms_hover_li">
                         <i class="bi bi-reception-4"></i>
                         <span class="d-none d-lg-inline ps-2">Signals</span>
                     </li>
@@ -84,13 +84,97 @@
 
 
         <main>
+
+                        <!-- main header -->
           
             <div id="ms_main_header" class="container-fluid">
                 <div class="row align-items-center">
+                  <div class="col-md-4 col-12 text-white order-md-3">
+                     <span class="pe-3">Nuovo studente</span>
+                     <button class="btn btn-outline-light" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"><i class="bi bi-plus fw-bold"></i></button>
+
+                     <div class="offcanvas offcanvas-end " tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+                      <div class="offcanvas-header">
+                        <h5 class="offcanvas-title" id="offcanvasRightLabel">inserissci il nuovo studente</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                      </div>
+                      <div class="offcanvas-body">
+                        <form class="row g-3">
+
+                          <div class="col-md-6">
+                            <label for="name" class="form-label">Nome</label>
+                            <input type="text" class="form-control" id="name">
+                          </div>
+                          <div class="col-md-6">
+                            <label for="last-name" class="form-label">Cognome</label>
+                            <input type="text" class="form-control" id="last-name">
+                          </div>
+                          <div class="col-md-6">
+                            <label for="inputEmail4" class="form-label">Email</label>
+                            <div class="input-group">
+                              <span class="input-group-text border-end-0 bg-body-secondary" id="basic-addon1">@</span>
+                              <input type="email" class="form-control border-start-0" placeholder="" aria-label="Username" aria-describedby="basic-addon1">
+                            </div>
+                          </div>
+                          <div class="col-md-6">
+                            <label for="inputPassword4" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="inputPassword4">
+                          </div>
+                          <div class="col-md-6">
+                            <label for="inputEmail4" class="form-label">Indirizzo Email</label>
+                            <div class="input-group">
+                              <span class="input-group-text border-end-0 bg-body-secondary" id="basic-addon1">@</span>
+                              <input type="email" class="form-control border-start-0" placeholder="" aria-label="Username" aria-describedby="basic-addon1">
+                            </div>
+                          </div>
+                          <div class="col-md-6">
+                            <label for="inputPassword4" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="inputPassword4">
+                          </div>
+                          <div class="col-12">
+                            <label for="inputAddress" class="form-label">Indirizzo</label>
+                            <input type="text" class="form-control" id="inputAddress" placeholder="">
+                          </div>
+                          <div class="col-md-6">
+                            <label for="inputCity" class="form-label">Città</label>
+                            <input type="text" class="form-control" id="inputCity">
+                          </div>
+                          <div class="col-md-4">
+                            <label for="inputState" class="form-label">Stato</label>
+                            <select id="inputState" class="form-select">
+                              <option selected>Choose...</option>
+                              <option>...</option>
+                            </select>
+                          </div>
+                          <div class="col-md-2">
+                            <label for="inputZip" class="form-label">CAP</label>
+                            <input type="text" class="form-control" id="inputZip">
+                          </div>
+                          <div class="mb-12">
+                            <label for="formFile" class="form-label">Foto</label>
+                            <input class="form-control" type="file" id="formFile">
+                          </div>
+                          <div class="col-12">
+                            <div class="form-check">
+                              <input class="form-check-input" type="checkbox" id="gridCheck">
+                              <label class="form-check-label" for="gridCheck">
+                                Seleziona per proseguire
+                              </label>
+                            </div>
+                          </div>
+                          <div class="col-12">
+                            <button type="submit" class="btn btn-primary">Salva</button>
+                            <button type="reset" class="btn btn-warning">Svuota</button>
+                          </div>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+
                     <div class="col-md-4 col-12">
                         <div>
-                            <span class="text-white fs-2">Boolean</span>
-                            <span class="badge rounded-pill ms_pill_blue">Piano blaze</span>
+                          <span class="text-white fs-2">Boolean</span>
+                          <span class="badge rounded-pill ms_pill_blue">Piano blaze</span>
                         </div>
 
                         <nav class="text-white" style="--bs-breadcrumb-divider: '≫';" aria-label="breadcrumb">
@@ -113,37 +197,14 @@
                         <h3>125</h3>
                     </div>
 
-                    <div class="col-md-4 col-12 text-white">
-                       <span class="pe-3">Nuovo studente</span>
-                       <button class="btn btn-outline-light" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"><i class="bi bi-plus fw-bold"></i></button>
-
-                       <div class="offcanvas offcanvas-end " tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
-                        <div class="offcanvas-header">
-                          <h5 class="offcanvas-title" id="offcanvasRightLabel">inserissci il nuovo studente</h5>
-                          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                        </div>
-                        <div class="offcanvas-body">
-                          <div class="container">
-                            <div class="row g-5">
-                                <div class="col-6">
-                                    <label for="form-control-name" class="form-label d-block">Nome</label>
-                                    <input class="form-control-name me-2" type="text" placeholder="" aria-label="text">
-                                </div>
-                                <div class="col-6">
-                                    <label for="form-control-last-name" class="form-label">Cognome</label>
-                                    <input class="form-control-last-name me-2" type="text" placeholder="" aria-label="text">
-                                </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
                 </div>
             </div>
 
             <div id="ma_bottom_main" class="container-fluid">
                 <div class="row">
                     
+                                              <!-- card tabella -->
+
                     <section class="col-12 col-md-8 g-3">
                         
                         <div class="card mb-3">
@@ -154,16 +215,16 @@
                                 <table class="table table-sm text-center ms_table_text">
                                     <thead>
                                       <tr>
-                                        <th scope="col">Nome</th>
-                                        <th scope="col">Data inizio</th>
-                                        <th scope="col">ROI</th>
-                                        <th scope="col">Stato</th>
-                                        <th scope="col">Azione</th>
+                                        <th class="ms_table_col_big" scope="col">Nome</th>
+                                        <th class="ms_table_col_small" scope="col">Data inizio</th>
+                                        <th class="ms_table_col_small" scope="col">ROI</th>
+                                        <th class="ms_table_col_small" scope="col">Stato</th>
+                                        <th class="ms_table_col_small" scope="col">Azione</th>
                                       </tr>
                                     </thead>
                                     <tbody>
                                       <tr>
-                                        <td>
+                                        <td class="w-auto">
                                             <img class="ms_logo_class" src="img/class-avatar.jpg" alt="class">
                                             <span>Classe 75</span>
                                         </td>
@@ -271,6 +332,8 @@
                             </div>
                           </div>
 
+                                                    <!-- card faq   -->
+
                           <div class="card mb-3">
                             <div class="card-header fs-3">
                               F.A.Q.
@@ -314,6 +377,8 @@
 
                     <section class="col-12 col-md-4 g-3">
 
+                                                              <!-- card todo -->
+
                         <div class="card mb-3">
                             <div class="card-header fs-3">
                               ToDo
@@ -347,12 +412,29 @@
                             </div>
                           </div>
 
+                                                <!-- card grafico -->
+
                           <div class="card mb-3">
-                            <div class="card-header">
-                              Featured
-                            </div>
                             <div class="card-body">
-                              
+                              <ul class="list-group">
+                                <li class="list-group-item">
+                                  <img class="w-100" src="img/stats.jpeg" alt="stats">
+                                </li>
+                                  <li class="list-group-item">
+                                    Gennaio:1200
+                                  </li>
+                                  <li class="list-group-item">
+                                    Febbraio:800
+                                  </li>
+                                  <li class="list-group-item">
+                                    Marzo:1500
+                                  </li>
+                                  <li class="list-group-item">
+                                    <a href="#">
+                                      Visualizza report approfondito
+                                    </a>
+                                  </li>
+                              </ul>
                             </div>
                           </div>
                     </section>

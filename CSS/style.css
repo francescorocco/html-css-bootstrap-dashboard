@@ -1,29 +1,51 @@
-.ms_logo_big{
-    display: none;
+:root{
+    --light-blue: #2072e6;
+    --pill-blue: #1a5bb8;
 }
 
-.ms_logo_mobile{
-    width: 50px;
 
+.ms_logo_mobile{
+    width: 45px;
 }
 
 .ms_gold_bel{
     color: gold;
 }
 
+header nav{
+    height: 55px;
+}
+
 
 #ms_big_container{
     margin-top: 56px;
+    height: calc(100vh - 56px);
 }
+
+#sidebar{
+    background-image: url(../img/sidebar-bg.png);
+    background-size: cover;
+    background-color: #051d33;
+}
+
+main{
+    width: calc(100vw - 50px);
+    overflow-y: scroll;
+}
+
+
+#ms_main_header{
+    width: 100%;
+    background-color: var(--light-blue);
+}
+
+.breadcrumb-item+.breadcrumb-item::before{
+    color: white;
+}
+
 
 
 /* debug */
-
- #sidebar{
-    width: 50px;
-    height: calc(100vh - 56px);
-    background-color: red;
-}
 
 .debug .sidebar-top{
     height: calc(100% - 50px);
@@ -46,15 +68,10 @@
     width: 100%;
 }
 
+/* fine debug  */
 
-main{
-    width: calc(100vw - 50px);
-    height: calc(100vh - 56px);
-    overflow-y: scroll;
-}
-
-#ms_main_header{
-    width: 100%;
+.ms_pill_blue{
+    background-color: var(--pill-blue);
 }
 
 
@@ -67,16 +84,8 @@ main{
 
 
 
-@media screen and (min-width: 768px){
-    .ms_logo_mobile{
-        display: none;
-    }  
-    .ms_logo_big{
-        display: block;
-    }
 
 
-}
 
 @media screen and (min-width: 992px){
     #sidebar{

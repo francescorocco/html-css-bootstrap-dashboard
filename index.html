@@ -13,15 +13,19 @@
 
 <body class="debug">
 
-    <header class="">
-        <nav class="navbar navbar-expand-md bg-body-tertiary fixed-top">
+    <header>
+        <nav class="navbar navbar-expand-md bg-body-tertiary fixed-top pt-md-2 pt-0">
             <div class="container-fluid flex-nowrap">
                 <a class="navbar-brand" href="#">
-                    <img src="img/mobile-logo.png" alt="logo-boolean" class="ms_logo_mobile">
-                    <img src="img/logo.svg" alt="logo-boolean" class="ms_logo_big">
+                    <img src="img/mobile-logo.png" alt="logo-boolean" class="d-md-none ms_logo_mobile">
+                    <img src="img/logo.svg" alt="logo-boolean" class="d-none d-md-block">
                 </a>
                 
-                <input class="form-control me-2" type="search" placeholder="Prova a cercare:Lezioni di laravel" aria-label="Search">
+                <div class="input-group">
+                    <span class="input-group-text border-end-0 bg-body-secondary" id="basic-addon1"><i class="bi bi-search"></i></span>
+                    <input type="text" class="form-control border-start-0 bg-body-secondary me-3" placeholder="Prova a cercare: Lezioni di Laravel" aria-label="Username" aria-describedby="basic-addon1">
+                </div>
+
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
@@ -54,8 +58,21 @@
 
     <div class="d-flex" id="ms_big_container">
         <aside id="sidebar">
-            <div class="sidebar-top red">
-
+            <div class="sidebar-top text-white ps-3 pt-3">
+                <ul class="navbar-nav">
+                    <li>
+                        <i class="bi bi-house-fill"></i>
+                        <span class="d-none d-md-inline ps-2">Home</span>
+                    </li>
+                    <li>
+                        <i class="bi bi-bar-chart-fill"></i>
+                        <span class="d-none d-md-inline ps-2">Stats</span>
+                    </li>
+                    <li>
+                        <i class="bi bi-reception-4"></i>
+                        <span class="d-none d-md-inline ps-2">Signals</span>
+                    </li>
+                </ul>
             </div>
 
             <div class="sidebar-bottom yellow">
@@ -66,16 +83,57 @@
 
         <main>
           
-            <div id="ms_main_header" class="container-fluid blu">
-                <div class="row">
-                    <div class="col-md-4 col-12 ">
-                        <div class="box"></div>
-                    </div>
-                    <div class="col-md-4  col-12">
-                        <div class="box"></div>
-                    </div>
+            <div id="ms_main_header" class="container-fluid">
+                <div class="row align-items-center">
                     <div class="col-md-4 col-12">
-                        <div class="box"></div>
+                        <div>
+                            <span class="text-white fs-2">Boolean</span>
+                            <span class="badge rounded-pill ms_pill_blue">Piano blaze</span>
+                        </div>
+
+                        <nav class="text-white" style="--bs-breadcrumb-divider: '≫';" aria-label="breadcrumb">
+                            <ol class="breadcrumb">
+                              <li class="breadcrumb-item">
+                                <span class="badge rounded-pill ms_pill_blue">3 app</span>
+                              </li>
+                              <li class="breadcrumb-item active" aria-current="page">
+                                <span class="badge rounded-pill ms_pill_blue">Boolean mobile app</span>
+                                <span class="badge rounded-pill ms_pill_blue">Boolean web app</span>
+                                <span class="badge rounded-pill ms_pill_blue">Boolean blog app</span>
+                              </li>
+                            </ol>
+                          </nav>
+                    </div>
+
+                    <div class="col-md-4  col-12 text-white">
+                        <p class="mb-0">Studenti online negli ultimi 30 minuti</p>
+                        <h3>125</h3>
+                    </div>
+
+                    <div class="col-md-4 col-12">
+                       <span>Nuovo studente</span>
+                       <button class="btn btn-outline-light" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"><i class="bi bi-plus fw-bold"></i></button>
+
+                       <div class="offcanvas w-auto offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+                        <div class="offcanvas-header">
+                          <h5 class="offcanvas-title" id="offcanvasRightLabel">inserissci il nuovo studente</h5>
+                          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                        </div>
+                        <div class="offcanvas-body">
+                          <div class="container">
+                            <div class="row g-3">
+                                <div class="col-6">
+                                    <label for="form-control-name" class="form-label d-block">Nome</label>
+                                    <input class="form-control-name me-2" type="text" placeholder="" aria-label="text">
+                                </div>
+                                <div class="col-6">
+                                    <label for="form-control-last-name" class="form-label">Cognome</label>
+                                    <input class="form-control-last-name me-2" type="text" placeholder="" aria-label="text">
+                                </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
                     </div>
                 </div>
             </div>

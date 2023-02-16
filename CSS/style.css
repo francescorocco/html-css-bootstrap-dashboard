@@ -3,6 +3,7 @@
     --pill-blue: #1a5bb8;
 }
 
+                /* header */
 
 .ms_logo_mobile{
     width: 45px;
@@ -16,6 +17,8 @@ header nav{
     height: 55px;
 }
 
+            /* sidebar */
+
 .sidebar-top{
     height: calc(100% - 50px);
 }
@@ -24,10 +27,6 @@ header nav{
     height: 50px;
 }
 
-#ms_big_container{
-    margin-top: 56px;
-    height: calc(100vh - 56px);
-}
 
 #sidebar{
     background-image: url(../img/sidebar-bg.png);
@@ -41,12 +40,18 @@ header nav{
     background-color: white;
     color: black;
 }
-
+                /* container */
 main{
     width: calc(100vw - 50px);
     overflow-y: scroll;
 }
 
+#ms_big_container{
+    margin-top: 56px;
+    height: calc(100vh - 56px);
+}
+
+                            /* main header */
 
 #ms_main_header{
     width: 100%;
@@ -57,13 +62,18 @@ main{
     color: white;
 }
 
-
-.ms_table_col_big{
-    width: auto;
+.ms_pill_blue{
+    background-color: var(--pill-blue);
 }
 
-.ms_table_col_small{
-    width: 10%;
+                /* card table */
+
+.ms_table_col_big{
+    width: 60%;
+}
+
+.ms_table_text td{
+    white-space:nowrap;
 }
 
 .ms_logo_class{
@@ -83,11 +93,6 @@ main{
     display: none;
 }
 
-
-.ms_pill_blue{
-    background-color: var(--pill-blue);
-}
-
 .offcanvas.offcanvas-end{
     width: 100%;
 }
@@ -105,10 +110,6 @@ main{
         display: table-cell;
     }
 }
-
-
-
-
 
 @media screen and (min-width: 992px){
     #sidebar{
